@@ -1,0 +1,92 @@
+body {
+    background-color: #db880b;
+    border: solid 40px #ebcf33;
+    margin: 0;
+    padding: 0px;
+    color: white;
+    font-family: 'BIZ UDGothic', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+   align-content: center;
+   max-width:fit-content;
+   max-height: fit-content;
+   flex-direction: column;
+}
+
+header {
+    display: flex;
+text-align: center;
+
+}
+
+.game-box {
+    background-color: #ff6804;
+    border: solid 20px #fdb14c;
+    border-radius: 33px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    box-shadow: 0 0 40px #ff6804;
+    max-width: 60%;
+}
+
+.img {
+width: 16%;
+height: 50%;
+align-content: center;
+padding:20px;
+}
+
+button{
+padding: 10px;
+}
+
+.prompt {
+    text-align: center;
+    font-size: 20px;
+    background-color: #ebcf33;
+}
+.btn-grid{
+display: flex;
+justify-content: space-between;
+padding: 5px;
+gap: 10px;
+
+}
+
+.btn {
+background-color: #fdb14c;
+border: 2px solid #fccf06;
+border-radius: 5px;
+padding: 5px 10px;
+}
+
+.btn:hover{
+    border-color: #ff0404;
+    box-shadow: 0 0 20px #ff0404;
+}
+
+.stats{
+    display:flex;
+    background-color: #ff6804;
+    border: solid 2px #e0c10d;
+    border-radius: 10px;
+    padding: 5px;
+    gap: 18px;
+    text-align: center;
+}
+
+.uhoh {
+    box-shadow: 0 0 30px #ff0404
+}
+
+.happy1 {
+    box-shadow:0 0 20px#ffe600
+}
+.rm   {
+    opacity: 0%
+}
