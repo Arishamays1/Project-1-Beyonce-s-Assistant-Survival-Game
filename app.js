@@ -297,6 +297,106 @@ const textNodes = [
             }
         ]
     },
+     //this is textnodes[6]
+     {  id: 4.1,
+         text:"Beyonce Paints. Beyoncé is anxious and tells you to play that song from Lemonade that she loves. Which song are you playing Sandcastles Or All Night?",
+         options: [
+             {
+                 text:"Sandcastles",
+                 nextText: 6.0
+             },
+             {
+                 text: "All Night",
+                 nextText: 6.1
+             }
+         ]
+     },
+     //this is textnodes[7]
+     {  id: 4.2,
+        text: "Beyoncé says 'I’m not drinking an gossiping with you peasant...!' You’ve been FIRED!"
+         
+     },
+     
+     //this is textnodes[8]
+     {  id: 5.0,
+        text:"Beyonce swims in the chlorine infinity pool.... Beyoncé is done swimming! Her hair and makeup has arrived! Do you suggest she takes a shower and makes her stylist team wait or just dry off?",
+        options: [
+            {
+                text:"Take shower.",
+                nextText: 7.0
+            },
+            {
+                text: " Simply dry off.",
+                nextText: 7.1
+            }
+        ]
+     },
+     //this is textnodes[9]
+     {  id: 5.1,
+         text: "Beyonce swims in the mineral infinity pool.... Beyoncé is done swimming! Her hair and makeup team has arrived! Do you suggest she takes a shower and makes her stylist team wait or just dry off?",
+         options: [
+            {
+                text:"Take shower.",
+                nextText: 8.0
+            },
+            {
+                text: " Simply dry off.",
+                nextText: 8.1
+            }
+        ]
+     },
+     
+     //this is textnodes[10]
+     {  id: 6.0,
+         text: "Beyoncé burst out in tears then fires you after 3:03 minutes and tells you to the get out!!! FIRED."
+     },
+     //this is textnodes[11]
+     {  id: 6.1,
+         text: "Beyoncé says, 'Oh yes that's the one!' and sings along while painting. Beyoncé's makeup artist is running late. Beyoncé doesn't know, what are you doing?",
+        options: [
+            {
+                text:"Do her makeup yourself.",
+                nextText: 9.0
+            },
+            {
+                text:"Tell her Sir John is running late.",
+                nextText: 9.1
+            }
+
+        ]
+     },
+     //this is textnodes[12]
+     {  id: 7.0,
+         text:"Beyonce takes a shower....Beyoncé's hair is too discolored from the chlorine to fix in time. You’ve been fired!",
+     },
+     {  id: 7.1,
+         text:"Beyonce simply pats dry....The application for Beyoncé's makeup and body glo is ruined from the chlorine as well as her hair! You're FIRED!"
+     },
+     
+     //this is textnodes[13]
+     {  id: 8.0,
+         text:"Beyonce takes a shower....All clean! Her make up team is working quickly. Beyonce is hungry. What are you bringing her?",
+         options: [
+             {
+                 text : "Oat cakes",
+                 nextText: 10.0
+             },
+             {
+                 text: "Hot Cheetohs",
+                 nextText: 10.1
+             }
+         ]
+     },
+     //this is textnodes[14]
+     {  id: 8.1,
+         text: "Beyonce simply pats dry.... Beyonce comes out incredibly ashy and throws a bottle of Jergens at you. You're fired!!"
+     },
+     {  id: 9.0,
+        text: "You actually do a great job. Beyonce is shocked and says, 'This is great work baby... This is for your own good because you need to pursue being a makeup artist instead of an assistant..' AND FIRES YOU."
+    },
+     /*
+     
+     */
 ]
 
 
