@@ -28,13 +28,9 @@ let patienceStat= document.querySelector("#patiences")
 let btnElement=document.querySelector("#option-btns")
 let prompt= document.querySelector(".prompt")
 let gameActive= true
+let beyState= {}
 
 
-hungerStat.innerHTML= beyonce.hunger
-sleepyStat.innerHTML=beyonce.sleepiness
-happyStat.innerHTML=beyonce.happiness
-ageStat.innerHTML=beyonce.age
-patienceStat.innerHTML=beyonce.patience
 
 console.log(prompt)
 
@@ -67,21 +63,50 @@ function showTextNode(textNodeIndex){
             const button = document.createElement("button")
             button.innerText= option.text
              button.classList.add("btn")
-             button.addEventListener('click',() =>selectOption(option))
+             button.addEventListener('click',() =>selectOption(button.innerText))
              btnElement.appendChild(button)
         }
     });
 }
+//function decreaseHunger (option){
+   // if(option===textNodes[0].options[0].text){
+   //     beyonce.hunger--
+//console.log(beyonce.hunger)
+//hungerStat.innerHTML= beyonce.hunger
+ //   }
 
+
+//}
 
 function showOption(option){
     return true
 }
 
+hungerStat.innerHTML= beyonce.hunger
+sleepyStat.innerHTML=beyonce.sleepiness
+happyStat.innerHTML=beyonce.happiness
+ageStat.innerHTML=beyonce.age
+patienceStat.innerHTML=beyonce.patience
+
+// function for the options
 function selectOption(option){
-    
+    console.log("this should be checked for hunger --")
+    console.log("this is button.innertext", option)
+    if(option===textNodes[0].options[0].text){
+       beyonce.hunger -=2,
+       hungerStat.innerHTML= beyonce.hunger
+       console.log('it worked')
+       console.log(beyonce.hunger)
+    }
+    if(option===textNodes[0].options[1].text){
+        beyonce.hunger -=2,
+        hungerStat.innerHTML= beyonce.hunger
+        beyonce.happiness += 1
+        console.log('it worked')
+        console.log(beyonce.hunger)
 }
-console.log(beyonce)
+//}
+
 
 /*function hunger(2,1, 1){
                 beyonce.hunger-= 2,
@@ -89,9 +114,17 @@ console.log(beyonce)
                 beyonce.patience= + 1
                }
 */
-
-
-const textNodes= [
+//function options1(){
+   // textNodes[0].options
+  //  if(gameActive=== true){
+ //       if(textNodes[0].options[0]){
+    //        currentImg.src = img.src.replace("https://pbs.twimg.com/media/D9tPHLlUwAEQKbM?format=jpg&name=small")
+        //}
+  //  }
+//}
+//Below is the coding used to allow the multiple scenarios to
+// pop up when the play button is clicked
+let textNodes= [
     {
         id: 1,
         text: "You're starting your first day off at her house, make sure to assist all her needs and demands, she's going to an event today what are you having her prepared for breakfast?",
@@ -99,7 +132,13 @@ const textNodes= [
             {
                 text: "Granola with berries and yogurt",
                 nextText: 2.0,
+               
+                
+            
+            
             },
+                
+            
             {
                 text: "Tuna Fish Sandwhich",
                 //$hungerStat: - 4, $happyStat: + 3 , $patienceStat:+ 3,
@@ -117,6 +156,7 @@ const textNodes= [
             {
                 text: "Call Blue Ivy",
                 nextText: 3.0,
+                //decreaseHunger: //decreaseHunger(selectOption)
 
             },
             {
@@ -142,3 +182,5 @@ const textNodes= [
     }
     
 ]
+
+console.log(textNodes[0].options)
