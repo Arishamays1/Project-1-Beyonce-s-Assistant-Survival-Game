@@ -394,6 +394,36 @@ const textNodes = [
      {  id: 9.0,
         text: "You actually do a great job. Beyonce is shocked and says, 'This is great work baby... This is for your own good because you need to pursue being a makeup artist instead of an assistant..' AND FIRES YOU."
     },
+    {
+        id: 9.1,
+        text: "Beyoncé says 'Oh baby they’re not running late, we're just ahead of schedule.!' Sir John arrives, should Beyoncé finish getting styled in the car or risk being late and have him finish at home?",
+        options: [
+            {
+                text: "Finish getting ready in the car.",
+                nextText: 11.0
+            },
+            {
+                text: "Finish at home and risk being late.",
+                nextText: 11.1
+            }
+        ]
+    },
+    {  id: 10.0,
+        text: "You bring her oat cakes. She smiles and tells you how much she loves oat cakes! Sir John arrives, should Beyoncé finish getting styled in the car or risk being late and have him finish at home?",
+        options: [
+            {
+                text: "Finish getting ready in the car.",
+                nextText: 11.0
+            },
+            {
+                text: "Finish at home and risk being late.",
+                nextText: 11.1
+            }
+        ]
+    },
+    {  id: 10.1,
+        text: "You bring her Hot Cheetohs and they upset her stomach and she is unable to leave the house. You're fired, love."
+    }
      /*
      
      */
