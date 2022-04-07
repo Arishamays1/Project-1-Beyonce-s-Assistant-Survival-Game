@@ -137,6 +137,7 @@ const textNodes = [
         options: [
             {
                 text: "Granola with berries and yogurt",
+
                 nextText: 2.0,
                
                 
@@ -189,5 +190,5 @@ const textNodes = [
 ]
 
 
-
+console.log(option===textNodes[0].options[0].text)
 
