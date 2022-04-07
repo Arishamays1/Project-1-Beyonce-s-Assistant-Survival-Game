@@ -30,7 +30,11 @@ let prompt= document.querySelector(".prompt")
 let gameActive= true
 let beyState= {}
 
-
+hungerStat.innerHTML= beyonce.hunger
+sleepyStat.innerHTML=beyonce.sleepiness
+happyStat.innerHTML=beyonce.happiness
+ageStat.innerHTML=beyonce.age
+patienceStat.innerHTML=beyonce.patience
 
 console.log(prompt)
 
@@ -42,15 +46,14 @@ start.addEventListener('click', ()=>{
 )
 
 function startgame(){
-    if(startgame)
+    if(startgame){
     gameActive= true
     beyonce,
-
-showTextNode(1)
+    showTextNode(1)
+    }
 }
-
 function showTextNode(textNodeIndex){
-    const textNode= textNodes.find(textNode => textNode.id === 
+     let textNode=textNodes.find(textNode => textNode.id === 
         textNodeIndex)
     prompt.innerText=textNode.text
     while (btnElement.firstChild){
@@ -58,6 +61,7 @@ function showTextNode(textNodeIndex){
        
 
     }
+
     textNode.options.forEach(option => {
         if(showOption(option)){
             const button = document.createElement("button")
@@ -67,7 +71,7 @@ function showTextNode(textNodeIndex){
              btnElement.appendChild(button)
         }
     });
-}
+
 //function decreaseHunger (option){
    // if(option===textNodes[0].options[0].text){
    //     beyonce.hunger--
@@ -95,13 +99,15 @@ function selectOption(option){
     if(option===textNodes[0].options[0].text){
        beyonce.hunger -=2,
        hungerStat.innerHTML= beyonce.hunger
+        beyonce.happiness += 1,
+       
        console.log('it worked')
        console.log(beyonce.hunger)
     }
     if(option===textNodes[0].options[1].text){
         beyonce.hunger -=2,
         hungerStat.innerHTML= beyonce.hunger
-        beyonce.happiness += 1
+       
         console.log('it worked')
         console.log(beyonce.hunger)
 }
@@ -122,9 +128,12 @@ function selectOption(option){
         //}
   //  }
 //}
+
+
+
 //Below is the coding used to allow the multiple scenarios to
 // pop up when the play button is clicked
-let textNodes= [
+ let textNodes= [
     {
         id: 1,
         text: "You're starting your first day off at her house, make sure to assist all her needs and demands, she's going to an event today what are you having her prepared for breakfast?",
@@ -183,4 +192,5 @@ let textNodes= [
     
 ]
 
-console.log(textNodes[0].options)
+
+}}
