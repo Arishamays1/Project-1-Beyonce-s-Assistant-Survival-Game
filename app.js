@@ -46,31 +46,29 @@ start.addEventListener('click', ()=>{
 )
 
 function startgame(){
-    if(startgame){
+    if(startgame)
     gameActive= true
     beyonce,
-    showTextNode(1)
-    }
-}
+ showTextNode(1)
+  }
+
 function showTextNode(textNodeIndex){
-     let textNode=textNodes.find(textNode => textNode.id === 
-        textNodeIndex)
+    const textNode= textNodes.find(textNode => textNode.id === textNodeIndex)
     prompt.innerText=textNode.text
     while (btnElement.firstChild){
         btnElement.removeChild(btnElement.firstChild)
        
-
     }
-
     textNode.options.forEach(option => {
         if(showOption(option)){
             const button = document.createElement("button")
             button.innerText= option.text
              button.classList.add("btn")
-             button.addEventListener('click',() =>selectOption(button.innerText))
+             button.addEventListener('click',() =>selectOption(option))
              btnElement.appendChild(button)
         }
     });
+}
 
 //function decreaseHunger (option){
    // if(option===textNodes[0].options[0].text){
@@ -99,17 +97,16 @@ function selectOption(option){
     if(option===textNodes[0].options[0].text){
        beyonce.hunger -=2,
        hungerStat.innerHTML= beyonce.hunger
-        beyonce.happiness += 1,
-       
        console.log('it worked')
        console.log(beyonce.hunger)
     }
     if(option===textNodes[0].options[1].text){
         beyonce.hunger -=2,
         hungerStat.innerHTML= beyonce.hunger
-       
+       beyonce.happiness += 1,
         console.log('it worked')
         console.log(beyonce.hunger)
+}
 }
 //}
 
@@ -133,7 +130,7 @@ function selectOption(option){
 
 //Below is the coding used to allow the multiple scenarios to
 // pop up when the play button is clicked
- let textNodes= [
+const textNodes = [
     {
         id: 1,
         text: "You're starting your first day off at her house, make sure to assist all her needs and demands, she's going to an event today what are you having her prepared for breakfast?",
@@ -189,8 +186,8 @@ function selectOption(option){
             }
         ]
     }
-    
 ]
 
 
-}}
+
+
