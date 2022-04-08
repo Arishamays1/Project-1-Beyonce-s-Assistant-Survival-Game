@@ -52,7 +52,7 @@ function startgame(){
     beyonce,
  showTextNode(1)
   }
-
+//this creates the button
 function showTextNode(textNodeIndex){
     const textNode= textNodes.find(textNode => textNode.id === textNodeIndex)
     prompt.innerText=textNode.text
@@ -69,7 +69,7 @@ function showTextNode(textNodeIndex){
              btnElement.appendChild(button)
         }
     });
-}
+} console.log()
 
 //function decreaseHunger (option){
    // if(option===textNodes[0].options[0].text){
@@ -95,6 +95,7 @@ patienceStat.innerHTML=beyonce.patience
 function selectOption(option){
     console.log("this should be checked for hunger --")
     console.log("this is button.innertext", option.text)
+    console.log(option.nextText)
     const nextTextNodeId = option.nextText
     showTextNode(nextTextNodeId)
     //level 1 if granola is picked
@@ -172,7 +173,7 @@ function selectOption(option){
         happyStat.innerHTML=beyonce.happiness
         
     }
-    {//if painting picked
+    //if painting picked
         if(option.text===textNodes[4].options[1].text && gameActive===true){
             beyonce.patience+=1
             patienceStat.innerHTML=beyonce.patience
@@ -181,8 +182,8 @@ function selectOption(option){
             beyonce.sleepiness+= 2
             sleepyStat.innerHTML=beyonce.sleepiness
         }
-    }
-    {//if gossiping and drinking is picked
+    
+    //if gossiping and drinking is picked
         if(option.text===textNodes[4].options[2].text && gameActive===true){
             console.log('it worked')
             console.log(beyonce)
@@ -190,8 +191,8 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             stopGame()
         }
-    }
-    {//if chlorine pool is picked
+    
+    //if chlorine pool is picked
         if(option.text===textNodes[6].options[0].text && gameActive===true){
             beyonce.happiness += 1
             happyStat.innerHTML=beyonce.happiness 
@@ -200,8 +201,8 @@ function selectOption(option){
             beyonce.hunger +=2,
             hungerStat.innerHTML= beyonce.hunger
         }
-    }
-    {// if mineral pool is picked
+    
+    // if mineral pool is picked
         if(option.text===textNodes[6].options[1].text && gameActive===true){
             beyonce.happiness += 1
             happyStat.innerHTML=beyonce.happiness 
@@ -210,8 +211,8 @@ function selectOption(option){
             beyonce.hunger +=2,
             hungerStat.innerHTML= beyonce.hunger
         }
-    }
-    { //if sandastles is picked
+    
+     //if sandastles is picked
         if(option.text===textNodes[7].options[0].text && gameActive===true){
             console.log('it worked')
             console.log(beyonce)
@@ -219,14 +220,14 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             stopGame()
         }
-    }    
-    {//if All Night is picked
+      
+    //if All Night is picked
         if(option.text===textNodes[7].options[1].text && gameActive===true){
             beyonce.happiness += 2
             happyStat.innerHTML=beyonce.happiness 
         }
-    }
-    {//if chlorine is picked and you shower
+    
+    //if chlorine is picked and you shower
         if(option.text===textNodes[9].options[0].text && gameActive===true){
             console.log('it worked')
             console.log(beyonce)
@@ -234,24 +235,54 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             stopGame()
         }
-    }//pat dry afte chlorine
-    {
+    //pat dry after chlorine
+    
         if(option.text===textNodes[9].options[1].text && gameActive===true){
         console.log('it worked')
         console.log(beyonce)
         beyonce.patience = 0
         patienceStat.innerHTML=beyonce.patience
-       // stopGame()
+       stopGame()
         }
-    }
-    {//if mineral water is picked and shower
+    
+    //if mineral water is picked and shower
         if(option.text===textNodes[10].options[0].text && gameActive===true){
+            console.log("i'm inside this")
             beyonce.happiness+=1
             happyStat.innerHTML=beyonce.happiness
             beyonce.patience += 1
             patienceStat.innerHTML=beyonce.patience
+        }//if mineral water and pat dry is picked.
+        if(option.text===textNodes[10].options[1].text && gameActive===true){
+            console.log('it worked')
+            console.log(beyonce)
+            beyonce.patience = 0
+            patienceStat.innerHTML=beyonce.patience
+           stopGame()
+            }
+            //if you pick all night and you do he makeup
+        if(option.text===textNodes[12].options[0].text && gameActive===true){
+           stopGame() 
+            }
+            //f you pick all night and tell her sir john is late
+        if(option.text===textNodes[12].options[1].text && gameActive===true){
+            beyonce.patience -= 2
+            patienceStat.innerHTML=beyonce.patience
+            beyonce.hunger+=2
+            hungerStat.innerHTML=beyonce.hunger
+        }    //mineral water , take bath, she is hungry and you pick oat cakes
+        if(option.text===textNodes[15].options[0].text && gameActive===true){
+            beyonce.happiness += 1
+            happyStat.innerHTML=beyonce.happiness 
+            beyonce.patience += 2
+            patienceStat.innerHTML=beyonce.patience
+            beyonce.hunger -=2,
+            hungerStat.innerHTML= beyonce.hunger
         }
-    } 
+        if(option.text===textNodes[15].options[0].text && gameActive===true){
+
+        }
+    
 }
 
 
@@ -275,13 +306,14 @@ restart.addEventListener('click', ()=>{
     patienceStat.innerHTML=beyonce.patience
     console.log("this is working")
     prompt.innerText= "After lying on your resume and hacking the Parkwood Entertainment database you landed the highest demanding jobs as one of 4 of Beyoncé’s assistants!"
+    btnElement.classList.add('rm')
     start.classList.remove('rm')
     
 })
 
 
 
-/*function hunger(2,1, 1){
+/*/function hunger(2,1, 1){
                 beyonce.hunger-= 2,
                 beyonce.happiness+ 1 , 
                 beyonce.patience= + 1
@@ -451,11 +483,11 @@ const textNodes = [
          text: "Beyonce swims in the mineral infinity pool.... Beyoncé is done swimming! Her hair and makeup team has arrived! Do you suggest she takes a shower and makes her stylist team wait or just dry off?",
          options: [
             {
-                text:"Take shower.",
+                text:"Take bath.",
                 nextText: 8.0
             },
             {
-                text: " Simply dry off.",
+                text: "Dry off.",
                 nextText: 8.1
             }
         ]
@@ -512,25 +544,25 @@ const textNodes = [
          //this is textnodes[16]
           id: 8.1,
          text: "Beyonce simply pats dry.... Beyonce comes out incredibly ashy and throws a bottle of Jergens at you. You're fired!!"
-     },
+     },//this is textnodes[17]
      {  id: 9.0,
         text: "You actually do a great job. Beyonce is shocked and says, 'This is great work baby... This is for your own good because you need to pursue being a makeup artist instead of an assistant..' AND FIRES YOU."
     },
-    {//this is textnodes[17]
+    {//this is textnodes[18]
         id: 9.1,
         text: "Beyoncé says 'Oh baby they’re not running late, we're just ahead of schedule.!' Sir John arrives, should Beyoncé finish getting styled in the car or risk being late and have him finish at home?",
         options: [
             {
-                text: "Finish getting ready in the car.",
+                text: "Continue getting ready in the car.",
                 nextText: 11.0
             },
             {
-                text: "Finish at home and risk being late.",
+                text: "Continue getting ready at home and risk being late.",
                 nextText: 11.1
             }
         ]
     },
-    {  //this is textnodes[18]
+    {  //this is textnodes[19]
         id: 10.0,
         text: "You bring her oat cakes. She smiles and tells you how much she loves oat cakes! Sir John arrives, should Beyoncé finish getting styled in the car or risk being late and have him finish at home?",
         options: [
@@ -544,7 +576,7 @@ const textNodes = [
             }
         ]
     },
-    {  //this is textnodes[19]
+    {  //this is textNodes[20]
         id: 10.1,
         text: "You bring her Hot Cheetohs and they upset her stomach and she is unable to leave the house. You're fired, love."
     }
