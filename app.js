@@ -135,8 +135,6 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             console.log('it worked')
             console.log(textNodes[1].options[0].text)
-            
-             
     }
     //calling rumi
     if(option.text===textNodes[1].options[1].text && gameActive===true){
@@ -172,12 +170,90 @@ function selectOption(option){
         patienceStat.innerHTML=beyonce.patience
         beyonce.happiness += 1
         happyStat.innerHTML=beyonce.happiness
+        
     }
+    {//if painting picked
+        if(option.text===textNodes[4].options[1].text && gameActive===true){
+            beyonce.patience+=1
+            patienceStat.innerHTML=beyonce.patience
+            beyonce.happiness += 1
+            happyStat.innerHTML=beyonce.happiness 
+            beyonce.sleepiness+= 2
+            sleepyStat.innerHTML=beyonce.sleepiness
+        }
+    }
+    {//if gossiping and drinking is picked
+        if(option.text===textNodes[4].options[2].text && gameActive===true){
+            console.log('it worked')
+            console.log(beyonce)
+            beyonce.patience = 0
+            patienceStat.innerHTML=beyonce.patience
+            stopGame()
+        }
+    }
+    {//if chlorine pool is picked
+        if(option.text===textNodes[6].options[0].text && gameActive===true){
+            beyonce.happiness += 1
+            happyStat.innerHTML=beyonce.happiness 
+            beyonce.sleepiness+= 2
+            sleepyStat.innerHTML=beyonce.sleepiness
+            beyonce.hunger +=2,
+            hungerStat.innerHTML= beyonce.hunger
+        }
+    }
+    {// if mineral pool is picked
+        if(option.text===textNodes[6].options[1].text && gameActive===true){
+            beyonce.happiness += 1
+            happyStat.innerHTML=beyonce.happiness 
+            beyonce.sleepiness+= 2
+            sleepyStat.innerHTML=beyonce.sleepiness
+            beyonce.hunger +=2,
+            hungerStat.innerHTML= beyonce.hunger
+        }
+    }
+    { //if sandastles is picked
+        if(option.text===textNodes[7].options[0].text && gameActive===true){
+            console.log('it worked')
+            console.log(beyonce)
+            beyonce.patience = 0
+            patienceStat.innerHTML=beyonce.patience
+            stopGame()
+        }
+    }    
+    {//if All Night is picked
+        if(option.text===textNodes[7].options[1].text && gameActive===true){
+            beyonce.happiness += 2
+            happyStat.innerHTML=beyonce.happiness 
+        }
+    }
+    {//if chlorine is picked and you shower
+        if(option.text===textNodes[9].options[0].text && gameActive===true){
+            console.log('it worked')
+            console.log(beyonce)
+            beyonce.patience = 0
+            patienceStat.innerHTML=beyonce.patience
+            stopGame()
+        }
+    }//pat dry afte chlorine
     {
-        if(option.text===textNodes[2].options[1].text && gameActive===true){}
+        if(option.text===textNodes[9].options[1].text && gameActive===true){
+        console.log('it worked')
+        console.log(beyonce)
+        beyonce.patience = 0
+        patienceStat.innerHTML=beyonce.patience
+       // stopGame()
+        }
     }
-
+    {//if mineral water is picked and shower
+        if(option.text===textNodes[10].options[0].text && gameActive===true){
+            beyonce.happiness+=1
+            happyStat.innerHTML=beyonce.happiness
+            beyonce.patience += 1
+            patienceStat.innerHTML=beyonce.patience
+        }
+    } 
 }
+
 
 function stopGame(){
     gameActive= false
@@ -320,7 +396,7 @@ const textNodes = [
    
     {  //this is textnodes[6]
         id: 4.0,
-        text: "Beyoncé goes and gets ready to go swimming, Beyoncé has three different types of pools, which pool should Beyoncé swim in?",
+        text: "Beyoncé goes and gets ready to go swimming, Beyoncé has two different types of pools, which pool should Beyoncé swim in?",
         options: [
             {
                 text:"Chlorine Pool",
@@ -478,5 +554,5 @@ const textNodes = [
 ]
 
 
-//console.log(option===textNodes[0].options[0].text)
+console.log(textNodes)
 
