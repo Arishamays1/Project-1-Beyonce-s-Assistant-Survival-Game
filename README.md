@@ -12,7 +12,7 @@ Wireframe and scenario cascade
 
 screen shot of the set up of the game
 ![Screen Shot 2022-04-06 at 11 03 35 AM (2)](https://user-images.githubusercontent.com/99516928/162006947-82505d4f-8ef0-4d0e-9f55-c509259cab83.png)
-Scenario and d Option choice example!
+Scenario and Option choice example!
 
 ![Screen Shot 2022-04-06 at 11 09 21 AM (2)](https://user-images.githubusercontent.com/99516928/162009446-df082087-81d7-4c55-80d8-2eaee6a3d324.png)
 
@@ -28,7 +28,10 @@ Here are my sprites.
 
 
 Happy Beyonce
+![beyonce's happy sprite](https://user-images.githubusercontent.com/99516928/162797707-a945c7da-62a5-4542-8ff6-56f2db9e3efa.png)
 
 Confused/irritated Beyonce
+![Beyonce's confused sprite](https://user-images.githubusercontent.com/99516928/162798468-420cf4c3-2c34-4ea6-a19b-c4bb311cc64e.png)
+
 
 ##
