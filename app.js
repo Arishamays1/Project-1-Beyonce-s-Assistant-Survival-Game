@@ -46,7 +46,7 @@ start.addEventListener('click', ()=>{
  start.classList.add("rm")
  startgame()
  music.play();
- $currentImg.attr("src","./images/isolatedhappybey.gif")
+ $currentImg.attr("src","./images/happybeyisofinal.gif")
 
 }
 )
@@ -104,6 +104,7 @@ function selectOption(option){
     console.log(option.nextText)
     const nextTextNodeId = option.nextText
     showTextNode(nextTextNodeId)
+
     //level 1 if granola is picked
     if(option.text===textNodes[0].options[0].text){
        beyonce.hunger -=1,
@@ -124,6 +125,7 @@ function selectOption(option){
         patienceStat.innerHTML=beyonce.patience
         console.log('it worked')
         console.log(beyonce.hunger)
+        
         //I need to create the function to not allow any other button to be clicked unless 
 } //allstar breakfast
     if(option.text===textNodes[0].options[2].text && gameActive===true){
@@ -293,13 +295,16 @@ function selectOption(option){
 
 
 function stopGame(){
-    gameActive= false
+    gameActive=== false
     btnElement.classList.add('rm')
-    //currentImg.attr("src","./images/confusedbey.gif")
+    $currentImg.attr("src","./images/confusedbeyisofinal.gif")
+    console.log("this works")
+    }
+    
 
     
     
-}
+
 
 restart.addEventListener('click', ()=>{
     //stopGame() 
@@ -607,7 +612,9 @@ const textNodes = [
             }
         ]
     },
-    {}
+    {
+        id: 11.1,
+    }
 
      /*
      

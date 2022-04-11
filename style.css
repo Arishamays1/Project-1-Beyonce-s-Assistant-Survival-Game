@@ -39,7 +39,10 @@ width: 16%;
 height: 50%;
 align-content: center;
 padding:20px;
-min-width: 300px;
+min-width: 200px;
+min-height: 300px;
+max-width: 200px;
+max-height: 300px;
 }
 
 button{
@@ -86,7 +89,7 @@ padding: 5px 10px;
 }
 
 .happy1 {
-    box-shadow:0 0 20px#ffe600
+    box-shadow:0 0 20px #ffe600
 }
 .rm   {
     opacity: 0%
