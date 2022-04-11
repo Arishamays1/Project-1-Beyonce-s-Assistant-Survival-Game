@@ -48,6 +48,7 @@ start.addEventListener('click', ()=>{
  music.play();
  $currentImg.attr("src","./images/happybeyisofinal.gif")
 
+
 }
 )
 
@@ -131,7 +132,12 @@ function selectOption(option){
     if(option.text===textNodes[0].options[2].text && gameActive===true){
         console.log('it worked')
         console.log(beyonce)
-        stopGame()
+        if(gameActive=false){          
+    btnElement.classList.add('rm')
+    $currentImg.attr("src","./images/confusedbeyisofinal.gif")
+    console.log("this works")
+
+        }
     }
     //end of Level 1
 //I need to create the function to not allow any other button to be clicked unless
@@ -268,7 +274,7 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
            stopGame()
             }
-            //if you pick all night and you do he makeup
+            //if you pick all night and you do her makeup
         if(option.text===textNodes[12].options[0].text && gameActive===true){
            stopGame() 
             }
@@ -295,8 +301,8 @@ function selectOption(option){
 
 
 function stopGame(){
-    gameActive=== false
-    btnElement.classList.add('rm')
+   gameActive= false
+   btnElement.classList.add('rm')
     $currentImg.attr("src","./images/confusedbeyisofinal.gif")
     console.log("this works")
     }
@@ -414,7 +420,10 @@ const textNodes = [
     //this is textnodes[3]
     {
         id:2.3,
-        text: "She side eyes you and says, 'Are you trying to make me fat???' She asks you to leave and has her layers send you a temination letter."
+        text: "She side eyes you and says, 'Are you trying to make me fat???' She asks you to leave and has her layers send you a temination letter.",
+       gameActive: false
+
+        
     },
 
       //this is textnodes[4]
@@ -600,7 +609,7 @@ const textNodes = [
     },
     {
         id: 11.0,
-        text: "You guys all pack into her 2022 Escalade and continue getting ready...Whew...Sir John finished in time and arrive to the Ocars. OOP! Will Smith just slapped Chris Rock!! Beyonce says to pull out her phone and tweet about it. ",
+        text: "You guys all pack into her 2022 Escalade and continue getting ready...Whew...Sir John finished in time and arrive to the Oscar's. OOP! Will Smith just slapped Chris Rock!! Beyonce says to pull out her phone and tweet about it. ",
         options: [
             {
                 text: "Post about it  on her fake Twitter page.",
@@ -614,6 +623,15 @@ const textNodes = [
     },
     {
         id: 11.1,
+        text:"You guys finish getting Bey ready at home. She's late and fires everybody."
+    },
+    {
+        id: 12.0,
+        text: "You post about the slap on Bey's fake twitter page. @imnotjada liked it. The Oscar's ceremony goes well! You've survived your first day as Beyonce's assistant! Congrats!"
+    },
+    {
+        id: 12.1,
+        text: "You post about the slap on Beyonce's official Twitter page... Bey gets cancelled byt Twitter. @troll404 says, 'MIND YOUR BUSINESS BEYONCE.' You're fired."
     }
 
      /*
