@@ -22,4 +22,13 @@ her model
 ![82bb96bef58b9fd](https://user-images.githubusercontent.com/99516928/162007633-a81fc344-be74-455d-9872-c91fc00fa0d7.png)
 
 https://art.pixilart.com/82bb96bef58b9fd.png
+
+I wanted to make the game look more alive. Since the model was a still frame of Beyonce, I decided to go a step further and animate an 8bit version based off of the still picture. To do this, I drew the edited animations myself on Procreate on my iPad then cead a gif of each one.
+Here are my sprites.
+
+
+Happy Beyonce
+
+Confused/irritated Beyonce
+
 ##

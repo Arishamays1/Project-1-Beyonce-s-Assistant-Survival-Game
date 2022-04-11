@@ -18,7 +18,7 @@ patience: 5
 };
 
 //Global Variables
-let currentImg =document.querySelector(".img")
+let $currentImg =$('.img')
 let start=document.querySelector(".start")
 let restart= document.querySelector(".restart")
 let hungerStat=document.querySelector("#hungry")
@@ -30,6 +30,7 @@ let btnElement=document.querySelector("#option-btns")
 let prompt= document.querySelector(".prompt")
 let gameActive= true
 let beyState= {}
+let music= new Audio ("music/holdup.mp3")
 
 hungerStat.innerHTML= beyonce.hunger
 sleepyStat.innerHTML=beyonce.sleepiness
@@ -39,10 +40,14 @@ patienceStat.innerHTML=beyonce.patience
 
 console.log(prompt)
 
+
 start.addEventListener('click', ()=>{
  btnElement.classList.remove('rm')
  start.classList.add("rm")
  startgame()
+ music.play();
+ $currentImg.attr("src","./images/isolatedhappybey.gif")
+
 }
 )
 
@@ -51,6 +56,7 @@ function startgame(){
     gameActive= true
     beyonce,
  showTextNode(1)
+ 
   }
 //this creates the button
 function showTextNode(textNodeIndex){
@@ -119,7 +125,7 @@ function selectOption(option){
         console.log('it worked')
         console.log(beyonce.hunger)
         //I need to create the function to not allow any other button to be clicked unless 
-}
+} //allstar breakfast
     if(option.text===textNodes[0].options[2].text && gameActive===true){
         console.log('it worked')
         console.log(beyonce)
@@ -289,6 +295,10 @@ function selectOption(option){
 function stopGame(){
     gameActive= false
     btnElement.classList.add('rm')
+    //currentImg.attr("src","./images/confusedbey.gif")
+
+    
+    
 }
 
 restart.addEventListener('click', ()=>{
@@ -308,7 +318,10 @@ restart.addEventListener('click', ()=>{
     prompt.innerText= "After lying on your resume and hacking the Parkwood Entertainment database you landed the highest demanding jobs as one of 4 of Beyoncé’s assistants!"
     btnElement.classList.add('rm')
     start.classList.remove('rm')
-    
+    music.pause();
+    //setInterval(() =>{
+       // music.play();
+  // }, 1500);
 })
 
 
@@ -579,7 +592,23 @@ const textNodes = [
     {  //this is textNodes[20]
         id: 10.1,
         text: "You bring her Hot Cheetohs and they upset her stomach and she is unable to leave the house. You're fired, love."
-    }
+    },
+    {
+        id: 11.0,
+        text: "You guys all pack into her 2022 Escalade and continue getting ready...Whew...Sir John finished in time and arrive to the Ocars. OOP! Will Smith just slapped Chris Rock!! Beyonce says to pull out her phone and tweet about it. ",
+        options: [
+            {
+                text: "Post about it  on her fake Twitter page.",
+                nextText: 12.0
+            },
+            {
+                text: "Post about it on her official Twitter page",
+                nextText: 12.1
+            }
+        ]
+    },
+    {}
+
      /*
      
      */

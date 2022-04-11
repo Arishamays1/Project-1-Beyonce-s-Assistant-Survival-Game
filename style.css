@@ -39,6 +39,7 @@ width: 16%;
 height: 50%;
 align-content: center;
 padding:20px;
+min-width: 300px;
 }
 
 button{
