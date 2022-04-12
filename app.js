@@ -1,14 +1,3 @@
-class Tomogatchi{
-    constructor(name,hunger,sleepiness,happiness, age, patience){
-    this.name= name;
-    this.hunger= hunger;
-    this.sleepines= sleepiness;
-    this.happiness= happiness;
-    this.age= age;
-    this.patience;
-    }
-}
-
 let beyonce={
 hunger: 4,
 sleepiness: 2,
@@ -34,6 +23,14 @@ let music= new Audio ("music/holdup.mp3")
 let correct = new Audio ("music/correct.mp3")
 let anything= new Audio ("music/anything.mp3")
 let crunch= new Audio ("music/crunch.mp3")
+let $mute=$('.mute')
+let $unmute=$('.unmute')
+
+crunch.volume=.3
+music.volume=.4
+correct.volume=.3
+anything.volume=.4
+
 
 hungerStat.innerHTML= beyonce.hunger
 sleepyStat.innerHTML=beyonce.sleepiness
@@ -43,6 +40,19 @@ patienceStat.innerHTML=beyonce.patience
 
 console.log(prompt)
 
+$mute.click(()=>{
+crunch.volume=0
+music.volume=0
+correct.volume=0
+anything.volume=0
+});
+
+$unmute.click(()=>{
+crunch.volume=.3
+music.volume=.4
+correct.volume=.3
+anything.volume=.4
+})
 
 start.addEventListener('click', ()=>{
  btnElement.classList.remove('rm')
@@ -51,8 +61,6 @@ start.addEventListener('click', ()=>{
  music.play();
  $currentImg.attr("src","./images/happybeyisofinal.gif")
  anything.play()
-
-
 
 }
 )
@@ -110,7 +118,6 @@ function selectOption(option){
     console.log(option.nextText)
     const nextTextNodeId = option.nextText
     showTextNode(nextTextNodeId)
-
     //level 1 if granola is picked
     if(option.text===textNodes[0].options[0].text){
        beyonce.hunger -=1,
@@ -122,9 +129,9 @@ function selectOption(option){
        beyonce.patience += 1
        patienceStat.innerHTML=beyonce.patience
        correct.play();
-       setInterval(()=>{
+       setTimeout(()=>{
         crunch.play();}, 200)
-        stopCrunch();
+        //stopCrunch();
     } // if tuna is picked
     if(option.text===textNodes[0].options[1].text && gameActive===true){
         beyonce.hunger -=3,
@@ -138,19 +145,14 @@ function selectOption(option){
         correct.play();
         setInterval(()=>{
          crunch.play();}, 200);
-         stopCrunch();
+         setTimeout(()=>{
+            crunch.play();}, 200)
         
         //I need to create the function to not allow any other button to be clicked unless 
 } //allstar breakfast
     if(option.text===textNodes[0].options[2].text && gameActive===true){
-        console.log('it worked')
-        console.log(beyonce)
-        if(gameActive=false){          
-    btnElement.classList.add('rm')
-    
-    console.log("stop game should work here")
-           // stopGame()
-        }
+        stopGame()
+        
     }
     //end of Level 1
 //I need to create the function to not allow any other button to be clicked unless
@@ -379,20 +381,8 @@ function stopGame(){
     $currentImg.attr("src","./images/confusedbeyisofinal.gif")
     console.log("this works")
     }
-    
-function imgMood() {
-    $currentImg.addClass("happy1");
-}
-    
-  function stopCrunch() {
-    crunch.stop(.200)
-    console.log("this was ran")
-  }
-
 
 restart.addEventListener('click', ()=>{
-    //stopGame() 
-    //startgame()
     beyonce.hunger= 4
     beyonce.sleepiness=2
     beyonce.happiness=4
@@ -413,22 +403,6 @@ restart.addEventListener('click', ()=>{
   // }, 1500);
 })
 
-
-
-/*/function hunger(2,1, 1){
-                beyonce.hunger-= 2,
-                beyonce.happiness+ 1 , 
-                beyonce.patience= + 1
-               }
-*/
-//function options1(){
-   // textNodes[0].options
-  //  if(gameActive=== true){
- //       if(textNodes[0].options[0]){
-    //        currentImg.src = img.src.replace("https://pbs.twimg.com/media/D9tPHLlUwAEQKbM?format=jpg&name=small")
-        //}
-  //  }
-//}
 
 
 
