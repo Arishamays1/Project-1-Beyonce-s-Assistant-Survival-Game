@@ -35,3 +35,24 @@ Confused/irritated Beyonce
 
 
 ##
+Technologies Used:
+- VS Code
+- Procreate and iPad and Apple Pencil
+- Google Chrome
+- Javascript
+- CSS
+- Jquery
+- HTML
+- Internet
+- Zoom
+
+
+##
+Getting Started
+- You're Beyonce's assistant for a day! Choose your path! Press play to begin. Select your choice! Don't get fired.
+
+##
+ICEBOX PLANS (Next Steps)
+- In the future, I would love to make the game longer in which the Beyonce can brng other characters into the game itself and interact with another character/celebrity. 
+- I would like to develop even more gifs and models for the game in order to show the reactions to different scenarios. The model should interact with the environment
+- Have buzzer music play when the wrong option is picked

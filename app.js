@@ -31,6 +31,9 @@ let prompt= document.querySelector(".prompt")
 let gameActive= true
 let beyState= {}
 let music= new Audio ("music/holdup.mp3")
+let correct = new Audio ("music/correct.mp3")
+let anything= new Audio ("music/anything.mp3")
+let crunch= new Audio ("music/crunch.mp3")
 
 hungerStat.innerHTML= beyonce.hunger
 sleepyStat.innerHTML=beyonce.sleepiness
@@ -47,6 +50,8 @@ start.addEventListener('click', ()=>{
  startgame()
  music.play();
  $currentImg.attr("src","./images/happybeyisofinal.gif")
+ anything.play()
+
 
 
 }
@@ -116,6 +121,10 @@ function selectOption(option){
        happyStat.innerHTML=beyonce.happiness
        beyonce.patience += 1
        patienceStat.innerHTML=beyonce.patience
+       correct.play();
+       setInterval(()=>{
+        crunch.play();}, 200)
+        stopCrunch();
     } // if tuna is picked
     if(option.text===textNodes[0].options[1].text && gameActive===true){
         beyonce.hunger -=3,
@@ -126,6 +135,10 @@ function selectOption(option){
         patienceStat.innerHTML=beyonce.patience
         console.log('it worked')
         console.log(beyonce.hunger)
+        correct.play();
+        setInterval(()=>{
+         crunch.play();}, 200);
+         stopCrunch();
         
         //I need to create the function to not allow any other button to be clicked unless 
 } //allstar breakfast
@@ -134,9 +147,9 @@ function selectOption(option){
         console.log(beyonce)
         if(gameActive=false){          
     btnElement.classList.add('rm')
-    $currentImg.attr("src","./images/confusedbeyisofinal.gif")
-    console.log("this works")
-
+    
+    console.log("stop game should work here")
+           // stopGame()
         }
     }
     //end of Level 1
@@ -150,6 +163,7 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             console.log('it worked')
             console.log(textNodes[1].options[0].text)
+            correct.play();
     }
     //calling rumi
     if(option.text===textNodes[1].options[1].text && gameActive===true){
@@ -169,6 +183,7 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             console.log('it worked')
             console.log(textNodes[1].options[0].text)
+            correct.play();
             
              
     }
@@ -185,6 +200,7 @@ function selectOption(option){
         patienceStat.innerHTML=beyonce.patience
         beyonce.happiness += 1
         happyStat.innerHTML=beyonce.happiness
+        correct.play();
         
     }
     //if painting picked
@@ -195,6 +211,7 @@ function selectOption(option){
             happyStat.innerHTML=beyonce.happiness 
             beyonce.sleepiness+= 2
             sleepyStat.innerHTML=beyonce.sleepiness
+            correct.play();
         }
     
     //if gossiping and drinking is picked
@@ -214,6 +231,7 @@ function selectOption(option){
             sleepyStat.innerHTML=beyonce.sleepiness
             beyonce.hunger +=2,
             hungerStat.innerHTML= beyonce.hunger
+            correct.play();
         }
     
     // if mineral pool is picked
@@ -224,9 +242,10 @@ function selectOption(option){
             sleepyStat.innerHTML=beyonce.sleepiness
             beyonce.hunger +=2,
             hungerStat.innerHTML= beyonce.hunger
+            correct.play();
         }
     
-     //if sandastles is picked
+     //if sandcastles is picked
         if(option.text===textNodes[7].options[0].text && gameActive===true){
             console.log('it worked')
             console.log(beyonce)
@@ -239,6 +258,7 @@ function selectOption(option){
         if(option.text===textNodes[7].options[1].text && gameActive===true){
             beyonce.happiness += 2
             happyStat.innerHTML=beyonce.happiness 
+            correct.play();
         }
     
     //if chlorine is picked and you shower
@@ -266,7 +286,10 @@ function selectOption(option){
             happyStat.innerHTML=beyonce.happiness
             beyonce.patience += 1
             patienceStat.innerHTML=beyonce.patience
-        }//if mineral water and pat dry is picked.
+            correct.play();
+        }
+
+        //if mineral water and pat dry is picked.
         if(option.text===textNodes[10].options[1].text && gameActive===true){
             console.log('it worked')
             console.log(beyonce)
@@ -274,17 +297,21 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
            stopGame()
             }
+
             //if you pick all night and you do her makeup
         if(option.text===textNodes[12].options[0].text && gameActive===true){
            stopGame() 
-            }
-            //f you pick all night and tell her sir john is late
+        }
+            //if you pick all night and tell her sir john is late
         if(option.text===textNodes[12].options[1].text && gameActive===true){
             beyonce.patience -= 2
             patienceStat.innerHTML=beyonce.patience
             beyonce.hunger+=2
             hungerStat.innerHTML=beyonce.hunger
-        }    //mineral water , take bath, she is hungry and you pick oat cakes
+            correct.play();
+
+        }   
+         //mineral water , take bath, she is hungry and you pick oat cakes
         if(option.text===textNodes[15].options[0].text && gameActive===true){
             beyonce.happiness += 1
             happyStat.innerHTML=beyonce.happiness 
@@ -292,10 +319,56 @@ function selectOption(option){
             patienceStat.innerHTML=beyonce.patience
             beyonce.hunger -=2,
             hungerStat.innerHTML= beyonce.hunger
-        }
-        if(option.text===textNodes[15].options[0].text && gameActive===true){
+            correct.play();
+        } 
 
+        //mineral water, take bath, and you bring her hot cheetohs
+        if(option.text===textNodes[15].options[1].text && gameActive===true){
+            stopGame()
         }
+        //
+        //mineral water, pat dry and she becomes ashy
+        if(textNodes.text===textNodes[16].text){
+            stopGame()
+            console.log("hi")
+        }
+        //bey paints, tell her sir john is running late, get ready in car
+        if(option.text===textNodes[18].options[0].text && gameActive===true){
+            beyonce.patience -= 2
+            patienceStat.innerHTML=beyonce.patience
+            beyonce.happiness -= 2
+            happyStat.innerHTML=beyonce.happiness 
+            beyonce.sleepiness+= 2
+            sleepyStat.innerHTML=beyonce.sleepiness
+            correct.play();
+        }
+       // bey paints, sir john is running late, get ready at home
+       if(option.text===textNodes[18].options[1].text && gameActive===true){
+           stopGame()
+       }
+       //beyonce swims in mineral pool,you bring her oatcakes, get ready in car
+       if(option.text===textNodes[19].options[0].text && gameActive===true){
+        beyonce.patience -= 2
+        patienceStat.innerHTML=beyonce.patience
+        beyonce.happiness -= 2
+        happyStat.innerHTML=beyonce.happiness 
+        beyonce.sleepiness+= 2
+        sleepyStat.innerHTML=beyonce.sleepiness
+        correct.play();
+         }
+       //bey swims in mineral pool, you bring oat cakes and stay home
+       if(option.text===textNodes[19].options[1].text && gameActive===true){
+        stopGame()
+        }
+      // if you post about the Oscar's event on her private twitter 
+      if(option.text===textNodes[21].options[0].text && gameActive===true){
+        beyonce.patience += 1
+        patienceStat.innerHTML=beyonce.patience
+        happyStat.innerHTML=beyonce.happiness 
+        beyonce.sleepiness+= 1
+        correct.play();
+      }
+        
     
 }
 
@@ -307,9 +380,14 @@ function stopGame(){
     console.log("this works")
     }
     
-
+function imgMood() {
+    $currentImg.addClass("happy1");
+}
     
-    
+  function stopCrunch() {
+    crunch.stop(.200)
+    console.log("this was ran")
+  }
 
 
 restart.addEventListener('click', ()=>{
@@ -355,7 +433,7 @@ restart.addEventListener('click', ()=>{
 
 
 //Below is the coding used to allow the multiple scenarios to
-// pop up when the play button is clicked
+// pop up when the play button is clicked and you select an option
 const textNodes = [
     {
          //this is textnodes[0]
@@ -421,7 +499,7 @@ const textNodes = [
     {
         id:2.3,
         text: "She side eyes you and says, 'Are you trying to make me fat???' She asks you to leave and has her layers send you a temination letter.",
-       gameActive: false
+       
 
         
     },
@@ -571,6 +649,7 @@ const textNodes = [
          //this is textnodes[16]
           id: 8.1,
          text: "Beyonce simply pats dry.... Beyonce comes out incredibly ashy and throws a bottle of Jergens at you. You're fired!!"
+
      },//this is textnodes[17]
      {  id: 9.0,
         text: "You actually do a great job. Beyonce is shocked and says, 'This is great work baby... This is for your own good because you need to pursue being a makeup artist instead of an assistant..' AND FIRES YOU."
@@ -607,6 +686,7 @@ const textNodes = [
         id: 10.1,
         text: "You bring her Hot Cheetohs and they upset her stomach and she is unable to leave the house. You're fired, love."
     },
+    //this is textNodes[21]
     {
         id: 11.0,
         text: "You guys all pack into her 2022 Escalade and continue getting ready...Whew...Sir John finished in time and arrive to the Oscar's. OOP! Will Smith just slapped Chris Rock!! Beyonce says to pull out her phone and tweet about it. ",
@@ -621,14 +701,17 @@ const textNodes = [
             }
         ]
     },
+     //this is textNodes[22]
     {
         id: 11.1,
         text:"You guys finish getting Bey ready at home. She's late and fires everybody."
     },
+     //this is textNodes[23]
     {
         id: 12.0,
         text: "You post about the slap on Bey's fake twitter page. @imnotjada liked it. The Oscar's ceremony goes well! You've survived your first day as Beyonce's assistant! Congrats!"
     },
+     //this is textNodes[24]
     {
         id: 12.1,
         text: "You post about the slap on Beyonce's official Twitter page... Bey gets cancelled byt Twitter. @troll404 says, 'MIND YOUR BUSINESS BEYONCE.' You're fired."

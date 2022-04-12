@@ -19,18 +19,23 @@ body {
 header {
     display: flex;
 text-align: center;
+background-color:#fdb14c;
+padding: 20px;
 
 }
-
+.parent {
+    display: flex;
+    justify-content: center;
+}
 .game-box {
     background-color: #ff6804;
     border: solid 20px #fdb14c;
-    border-radius: 33px;
+    border-radius: 0;
     display:flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    box-shadow: 0 0 40px #ff6804;
+    box-shadow: 0 0 90px #ff6804;
     max-width: 60%;
 }
 
@@ -65,7 +70,7 @@ gap: 10px;
 .btn {
 background-color: #fdb14c;
 border: 2px solid #fccf06;
-border-radius: 5px;
+border-radius: 0px;
 padding: 5px 10px;
 }
 
@@ -78,8 +83,8 @@ padding: 5px 10px;
     display:flex;
     background-color: #ff6804;
     border: solid 2px #e0c10d;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 0px;
+    padding: 10px;
     gap: 18px;
     text-align: center;
 }
@@ -89,8 +94,9 @@ padding: 5px 10px;
 }
 
 .happy1 {
-    box-shadow:0 0 20px #ffe600
+    box-shadow:0 0 20px #6f00ff
 }
 .rm   {
     opacity: 0%
 }
+
