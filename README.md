@@ -1,5 +1,6 @@
 # Project-1-Beyonce's-Asistant-Survival-Game.
-So my game is a choose-your-own-path in which your decisions as Beyonce's assistant impacts the rest of the game potentially. Some options for the multple scenarios lead to instant game over, while others add to her attributes bar. If her patience with you and other stats reach a certain level, the game is instantly over. I plan on implementing background 8 bit beyonce music in the background as well.
+This game is heavily inspired bythe viral Twitter thread created by the twitter handle, @Cornyasbitch. The Beyonce's Assistant Survival Game is a choose-your-own-path style game in which your decisions as Beyonce's assistant impacts the rest of the game potentially. Some options for the multple scenarios lead to instant game over, while others add to her attributes bar and continue her story. I plan on implementing background 8 bit beyonce music in the background as well.
+
 
 ##Images
 
@@ -23,7 +24,7 @@ her model
 
 https://art.pixilart.com/82bb96bef58b9fd.png
 
-I wanted to make the game look more alive. Since the model was a still frame of Beyonce, I decided to go a step further and animate an 8bit version based off of the still picture. To do this, I drew the edited animations myself on Procreate on my iPad then cead a gif of each one.
+I wanted to make the game look more alive. Since the model was a still frame of Beyonce, I decided to go a step further and animate an 8bit version based off of the still picture. To do this, I drew the edited animations myself on Procreate on my iPad then created a gif of each one.
 Here are my sprites.
 
 
@@ -43,8 +44,8 @@ Technologies Used:
 - CSS
 - Jquery
 - HTML
-- Internet
-- Zoom
+- YTMP3
+- EZgif.com
 
 
 ##

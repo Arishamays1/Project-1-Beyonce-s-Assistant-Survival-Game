@@ -26,7 +26,7 @@ let crunch= new Audio ("music/crunch.mp3")
 let gasp= new Audio ("music/gasp.mp3")
 let splash = new Audio ("music/splash.mp3")
 let mommy = new Audio("music/mommy.mp3")
-let encore= new Audio("music/encore.mp3")
+let encore1= new Audio("music/encore1.mp3")
 let $mute=$('.mute')
 let $unmute=$('.unmute')
 
@@ -34,7 +34,7 @@ crunch.volume=.1
 music.volume=.15
 correct.volume=.1
 anything.volume=.3
-splash.volume=1
+splash.volume=.1
 mommy.volume=.1
 
 hungerStat.innerHTML= beyonce.hunger
@@ -238,7 +238,7 @@ function selectOption(option){
             hungerStat.innerHTML= beyonce.hunger
             correct.play();
             setTimeout(()=>{
-                splash.play();}, 400)
+                splash.play();}, 100)
         }
     
     // if mineral pool is picked
@@ -251,7 +251,7 @@ function selectOption(option){
             hungerStat.innerHTML= beyonce.hunger
             correct.play();
             setTimeout(()=>{
-                splash.play();}, 400)
+                splash.play();}, 100)
         }
     
      //if sandcastles is picked
@@ -383,7 +383,7 @@ function selectOption(option){
         beyonce.sleepiness+= 1
         correct.play();
         setTimeout(()=>{
-            encore.play();}, 400)
+            encore1.play();}, 400)
       }
         
     
@@ -413,9 +413,7 @@ restart.addEventListener('click', ()=>{
     btnElement.classList.add('rm')
     start.classList.remove('rm')
     music.pause();
-    //setInterval(() =>{
-       // music.play();
-  // }, 1500);
+
 })
 
 
@@ -459,7 +457,7 @@ const textNodes = [
             {
                 text: "Call Blue Ivy",
                 nextText: 3.0,
-                //decreaseHunger: //decreaseHunger(selectOption)
+                
 
             },
             {
@@ -712,5 +710,5 @@ const textNodes = [
 ]
 
 
-console.log(textNodes)
+
 
