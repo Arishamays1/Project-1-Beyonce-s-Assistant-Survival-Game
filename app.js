@@ -23,14 +23,19 @@ let music= new Audio ("music/holdup.mp3")
 let correct = new Audio ("music/correct.mp3")
 let anything= new Audio ("music/anything.mp3")
 let crunch= new Audio ("music/crunch.mp3")
+let gasp= new Audio ("music/gasp.mp3")
+let splash = new Audio ("music/splash.mp3")
+let mommy = new Audio("music/mommy.mp3")
+let encore= new Audio("music/encore.mp3")
 let $mute=$('.mute')
 let $unmute=$('.unmute')
 
-crunch.volume=.3
-music.volume=.4
-correct.volume=.3
-anything.volume=.4
-
+crunch.volume=.1
+music.volume=.15
+correct.volume=.1
+anything.volume=.3
+splash.volume=1
+mommy.volume=.1
 
 hungerStat.innerHTML= beyonce.hunger
 sleepyStat.innerHTML=beyonce.sleepiness
@@ -45,13 +50,18 @@ crunch.volume=0
 music.volume=0
 correct.volume=0
 anything.volume=0
+splash.volume=0
+mommy.volume=0
+
 });
 
 $unmute.click(()=>{
-crunch.volume=.3
-music.volume=.4
-correct.volume=.3
-anything.volume=.4
+crunch.volume=.1
+music.volume=.15
+correct.volume=.1
+anything.volume=.3
+splash.volume=.1
+mommy.volume=.1
 })
 
 start.addEventListener('click', ()=>{
@@ -89,17 +99,8 @@ function showTextNode(textNodeIndex){
              btnElement.appendChild(button)
         }
     });
-} console.log()
+} 
 
-//function decreaseHunger (option){
-   // if(option===textNodes[0].options[0].text){
-   //     beyonce.hunger--
-//console.log(beyonce.hunger)
-//hungerStat.innerHTML= beyonce.hunger
- //   }
-
-
-//}
 
 function showOption(option){
     return true
@@ -131,7 +132,7 @@ function selectOption(option){
        correct.play();
        setTimeout(()=>{
         crunch.play();}, 200)
-        //stopCrunch();
+        
     } // if tuna is picked
     if(option.text===textNodes[0].options[1].text && gameActive===true){
         beyonce.hunger -=3,
@@ -143,10 +144,8 @@ function selectOption(option){
         console.log('it worked')
         console.log(beyonce.hunger)
         correct.play();
-        setInterval(()=>{
-         crunch.play();}, 200);
-         setTimeout(()=>{
-            crunch.play();}, 200)
+        setTimeout(()=>{
+            crunch.play()}, 200)
         
         //I need to create the function to not allow any other button to be clicked unless 
 } //allstar breakfast
@@ -166,6 +165,8 @@ function selectOption(option){
             console.log('it worked')
             console.log(textNodes[1].options[0].text)
             correct.play();
+            setTimeout(()=>{
+                mommy.play();}, 300)
     }
     //calling rumi
     if(option.text===textNodes[1].options[1].text && gameActive===true){
@@ -186,6 +187,8 @@ function selectOption(option){
             console.log('it worked')
             console.log(textNodes[1].options[0].text)
             correct.play();
+            setTimeout(()=>{
+                mommy.play();}, 300)
             
              
     }
@@ -234,6 +237,8 @@ function selectOption(option){
             beyonce.hunger +=2,
             hungerStat.innerHTML= beyonce.hunger
             correct.play();
+            setTimeout(()=>{
+                splash.play();}, 400)
         }
     
     // if mineral pool is picked
@@ -245,6 +250,8 @@ function selectOption(option){
             beyonce.hunger +=2,
             hungerStat.innerHTML= beyonce.hunger
             correct.play();
+            setTimeout(()=>{
+                splash.play();}, 400)
         }
     
      //if sandcastles is picked
@@ -322,6 +329,8 @@ function selectOption(option){
             beyonce.hunger -=2,
             hungerStat.innerHTML= beyonce.hunger
             correct.play();
+            setTimeout(()=>{
+                crunch.play();}, 200)
         } 
 
         //mineral water, take bath, and you bring her hot cheetohs
@@ -332,7 +341,7 @@ function selectOption(option){
         //mineral water, pat dry and she becomes ashy
         if(textNodes.text===textNodes[16].text){
             stopGame()
-            console.log("hi")
+           
         }
         //bey paints, tell her sir john is running late, get ready in car
         if(option.text===textNodes[18].options[0].text && gameActive===true){
@@ -343,6 +352,8 @@ function selectOption(option){
             beyonce.sleepiness+= 2
             sleepyStat.innerHTML=beyonce.sleepiness
             correct.play();
+            setTimeout(()=>{
+                gasp.play();}, 400)
         }
        // bey paints, sir john is running late, get ready at home
        if(option.text===textNodes[18].options[1].text && gameActive===true){
@@ -357,6 +368,8 @@ function selectOption(option){
         beyonce.sleepiness+= 2
         sleepyStat.innerHTML=beyonce.sleepiness
         correct.play();
+        setTimeout(()=>{
+            gasp.play();}, 400)
          }
        //bey swims in mineral pool, you bring oat cakes and stay home
        if(option.text===textNodes[19].options[1].text && gameActive===true){
@@ -369,6 +382,8 @@ function selectOption(option){
         happyStat.innerHTML=beyonce.happiness 
         beyonce.sleepiness+= 1
         correct.play();
+        setTimeout(()=>{
+            encore.play();}, 400)
       }
         
     
