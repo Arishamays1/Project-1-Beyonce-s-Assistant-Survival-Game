@@ -34,7 +34,7 @@ crunch.volume=.1
 music.volume=.15
 correct.volume=.1
 anything.volume=.3
-splash.volume=.1
+splash.volume=.09
 mommy.volume=.1
 
 hungerStat.innerHTML= beyonce.hunger
@@ -60,7 +60,7 @@ crunch.volume=.1
 music.volume=.15
 correct.volume=.1
 anything.volume=.3
-splash.volume=.1
+splash.volume=.09
 mommy.volume=.1
 })
 
