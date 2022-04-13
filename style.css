@@ -5,42 +5,46 @@ body {
     padding: 0px;
     color: white;
     font-family: 'BIZ UDGothic', sans-serif;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height:100vh;
-   align-content: center;
-   max-width:fit-content;
-   max-height: fit-content;
-   flex-direction: column;
+    height: 100vh;
+    align-content: center;
+    max-width: fit-content;
+    max-height: fit-content;
+    flex-direction: column;
 }
-.um{
+
+.um {
     background-color: #db880b;
     color: white;
     font-family: 'BIZ UDGothic', sans-serif;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-   align-content: center;
-   flex-direction: column;
+    align-content: center;
+    flex-direction: column;
 }
+
 header {
-display: flex;
-text-align: center;
-padding: 20px 10px  5px 10px;
-background: -webkit-linear-gradient(bottom, rgb(255, 199, 14), rgba(240, 22, 22, 0.346));
+    display: flex;
+    text-align: center;
+    padding: 20px 10px 5px 10px;
+    background: -webkit-linear-gradient(bottom, rgb(255, 199, 14), rgba(240, 22, 22, 0.346));
 
 }
+
 .parent {
     display: flex;
     justify-content: center;
 }
+
 .game-box {
     background-color: #ff6804;
     border: solid 20px #fdb14c;
     border-radius: 0;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
@@ -50,18 +54,18 @@ background: -webkit-linear-gradient(bottom, rgb(255, 199, 14), rgba(240, 22, 22,
 }
 
 .img {
-width: 16%;
-height: 50%;
-align-content: center;
-padding:20px;
-min-width: 200px;
-min-height: 300px;
-max-width: 200px;
-max-height: 300px;
+    width: 16%;
+    height: 50%;
+    align-content: center;
+    padding: 20px;
+    min-width: 200px;
+    min-height: 300px;
+    max-width: 200px;
+    max-height: 300px;
 }
 
-button{
-padding: 10px;
+button {
+    padding: 10px;
 }
 
 .prompt {
@@ -69,33 +73,34 @@ padding: 10px;
     font-size: 25px;
     background-color: #ebcf33;
 }
-.btn-grid{
-display: flex;
-justify-content: space-between;
-padding: 5px;
-gap: 10px;
+
+.btn-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 10px;
 
 
 
 }
 
 .btn {
-background-color: #fdb14c;
-border: 2px solid #fccf06;
-border-radius: 0px;
-padding: 5px 10px;
-color:aliceblue;
-font-size: 18px;
-font-family: 'BIZ UDGothic', sans-serif;
+    background-color: #fdb14c;
+    border: 2px solid #fccf06;
+    border-radius: 0px;
+    padding: 5px 10px;
+    color: aliceblue;
+    font-size: 18px;
+    font-family: 'BIZ UDGothic', sans-serif;
 }
 
-.btn:hover{
+.btn:hover {
     border-color: #ff0404;
     box-shadow: 0 0 20px #ff0404;
 }
 
-.stats{
-    display:flex;
+.stats {
+    display: flex;
     background-color: #ff6804;
     border: solid 2px #e0c10d;
     border-radius: 0px;
@@ -104,8 +109,6 @@ font-family: 'BIZ UDGothic', sans-serif;
     text-align: center;
 }
 
-.rm   {
+.rm {
     opacity: 0%
 }
-
-
